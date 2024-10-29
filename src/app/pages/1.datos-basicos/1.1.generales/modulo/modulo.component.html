@@ -1,0 +1,60 @@
+<h2 class="content-block">Módulo [MMOD]</h2>
+<div class="content-block">
+  <div class="dx-card responsive-paddings">
+    <dx-data-grid
+      [dataSource]="remoteDataSource"
+      keyExpr="codigo"
+      [allowColumnReordering]="true"
+      [allowColumnResizing]="true"
+      [columnAutoWidth]="true"
+      (onExporting)="onExporting($event)"
+    >
+      <dxo-remote-operations [groupPaging]="true"> </dxo-remote-operations>
+      <!-- (onSelectionChanged)="selectMmod($event)" -->
+      <dxi-column dataField="codigo" [fixed]="true">
+        <dxi-validation-rule type="required"></dxi-validation-rule>
+      </dxi-column>
+      <dxi-column dataField="descripcion">
+        <dxi-validation-rule type="required"></dxi-validation-rule>
+      </dxi-column>
+      <dxi-column dataField="estado">
+        <dxi-validation-rule type="required"></dxi-validation-rule>
+      </dxi-column>
+
+      <!-- Here the parameters to customize the grid -->
+      <dxo-column-chooser [enabled]="true"></dxo-column-chooser>
+      <dxo-filter-row [visible]="true"></dxo-filter-row>
+      <dxo-search-panel [visible]="true"></dxo-search-panel>
+      <dxo-group-panel [visible]="true"></dxo-group-panel>
+      <dxo-selection mode="single"></dxo-selection>
+      <dxo-editing
+        mode="popup"
+        [allowUpdating]="true"
+        [allowDeleting]="true"
+        [allowAdding]="true"
+      >
+      </dxo-editing>
+      <dxo-summary>
+        <dxi-group-item summaryType="count"> </dxi-group-item>
+      </dxo-summary>
+      <dxo-grouping [autoExpandAll]="false"></dxo-grouping>
+
+      <dxo-toolbar>
+        <dxi-item name="groupPanel"></dxi-item>
+        <dxi-item location="after">
+          <dx-button
+            [text]="expanded ? 'Collapse All' : 'Expand All'"
+            [width]="136"
+            (onClick)="expanded = !expanded"
+          >
+          </dx-button>
+        </dxi-item>
+        <dxi-item name="addRowButton" showText="always"></dxi-item>
+        <dxi-item name="exportButton"></dxi-item>
+        <dxi-item name="columnChooserButton"></dxi-item>
+        <dxi-item name="searchPanel"></dxi-item>
+      </dxo-toolbar>
+      <dxo-export [enabled]="true" [formats]="['xlsx']"></dxo-export>
+    </dx-data-grid>
+  </div>
+</div>

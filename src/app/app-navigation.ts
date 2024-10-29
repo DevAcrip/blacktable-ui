@@ -5,6 +5,11 @@ export const navigation = [
     icon: 'home'
   },
   {
+    text: 'Tipo de movimiento',
+    path: '/mtim',
+    icon: 'home'
+  },
+  {
     text: 'Examples',
     icon: 'folder',
     items: [
@@ -14,7 +19,7 @@ export const navigation = [
       },
       {
         text: 'Tasks',
-        path: '/tasks'
+        path: '/tasks',
       }
     ]
   }
