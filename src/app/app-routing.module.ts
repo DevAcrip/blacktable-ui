@@ -7,8 +7,17 @@ import { ProfileComponent } from './pages/profile/profile.component';
 import { TasksComponent } from './pages/tasks/tasks.component';
 import { DxDataGridModule, DxFormModule } from 'devextreme-angular';
 import { DxButtonModule } from 'devextreme-angular';
-import { DataGridComponent } from './pages/data-grid/data-grid.component';
 import { ModuloComponent } from './pages/1.datos-basicos/1.1.generales/modulo/modulo.component';
+import { EstadosGeneralesComponent } from './pages/1.datos-basicos/1.1.generales/estados-generales/estados-generales.component';
+import { ParametrosOperativosSistemaComponent } from './pages/1.datos-basicos/1.1.generales/parametros-operativos-sistema/parametros-operativos-sistema.component';
+import { ParametrosOperativosUsuarioComponent } from './pages/1.datos-basicos/1.1.generales/parametros-operativos-usuario/parametros-operativos-usuario.component';
+import { ParametrosOperativosEmpresaComponent } from './pages/1.datos-basicos/1.1.generales/parametros-operativos-empresa/parametros-operativos-empresa.component';
+import { TipoMovimientoComponent } from './pages/1.datos-basicos/1.1.generales/tipo-movimiento/tipo-movimiento.component';
+import { OperacionComponent } from './pages/1.datos-basicos/1.1.generales/operacion/operacion.component';
+import { TipoMovimientoOperacionComponent } from './pages/1.datos-basicos/1.1.generales/tipo-movimiento-operacion/tipo-movimiento-operacion.component';
+import { FondosComponent } from './pages/1.datos-basicos/1.1.generales/fondos/fondos.component';
+import { ClaseCuentaComponent } from './pages/1.datos-basicos/1.1.generales/clase-cuenta/clase-cuenta.component';
+import { TipoInformacionComponent } from './pages/1.datos-basicos/1.1.generales/tipo-informacion/tipo-informacion.component';
 
 const routes: Routes = [
   {
@@ -27,10 +36,64 @@ const routes: Routes = [
     canActivate: [ AuthGuardService ]
   },
   {
-    path: 'mtim',
+    path: 'mmod',
     component: ModuloComponent,
     canActivate: [ AuthGuardService ]
   },
+  {
+    path: 'mesg',
+    component: EstadosGeneralesComponent,
+    canActivate: [ AuthGuardService ]
+  },
+  {
+    path: 'mpos',
+    component: ParametrosOperativosSistemaComponent,
+    canActivate: [ AuthGuardService ]
+  },
+  {
+    path: 'mpsu',
+    component: ParametrosOperativosUsuarioComponent,
+    canActivate: [ AuthGuardService ]
+  },
+  {
+    path: 'mpem',
+    component: ParametrosOperativosEmpresaComponent,
+    canActivate: [ AuthGuardService ]
+  },
+  {
+    path: 'mtim',
+    component: TipoMovimientoComponent,
+    canActivate: [ AuthGuardService ]
+  },
+  {
+    path: 'mope',
+    component: OperacionComponent,
+    canActivate: [ AuthGuardService ]
+  },
+  {
+    path: 'mtmo',
+    component: TipoMovimientoOperacionComponent,
+    canActivate: [ AuthGuardService ]
+  },
+  {
+    path: 'mfon',
+    component: FondosComponent,
+    canActivate: [ AuthGuardService ]
+  },
+  {
+    path: 'mclc',
+    component: ClaseCuentaComponent,
+    canActivate: [ AuthGuardService ]
+  },
+  {
+    path: 'mtif',
+    component: TipoInformacionComponent,
+    canActivate: [ AuthGuardService ]
+  },
+
+
+
+
   {
     path: 'login-form',
     component: LoginFormComponent,

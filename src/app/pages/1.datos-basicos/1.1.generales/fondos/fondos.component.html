@@ -1,8 +1,8 @@
-<h2 class="content-block">Módulo [MMOD]</h2>
+<h2 class="content-block">Fondos [MFON]</h2>
 <div class="content-block">
   <div class="dx-card responsive-paddings">
     <dx-data-grid
-      [dataSource]="mmod"
+      [dataSource]="mfon"
       keyExpr="codigo"
       [columnAutoWidth]="true"
       [showColumnLines]="true"
@@ -20,7 +20,7 @@
         <dxi-validation-rule type="required"></dxi-validation-rule>
       </dxi-column>
       <dxo-editing
-        mode="form"
+        mode="popup"
         [allowUpdating]="true"
         [allowDeleting]="true"
         [allowAdding]="true"

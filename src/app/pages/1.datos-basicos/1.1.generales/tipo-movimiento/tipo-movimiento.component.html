@@ -1,8 +1,8 @@
-<h2 class="content-block">Estados generales [MESG]</h2>
+<h2 class="content-block">Tipo de movimiento [MTIM]</h2>
 <div class="content-block">
   <div class="dx-card responsive-paddings">
     <dx-data-grid
-      [dataSource]="mesg"
+      [dataSource]="mtim"
       keyExpr="codigo"
       [allowColumnReordering]="true"
       [allowColumnResizing]="true"
@@ -18,6 +18,13 @@
       <dxi-column dataField="descripcion">
         <dxi-validation-rule type="required"></dxi-validation-rule>
       </dxi-column>
+      <dxi-column dataField="modulo">
+        <dxi-validation-rule type="required"></dxi-validation-rule>
+      </dxi-column>
+      <dxi-column dataField="estado">
+        <dxi-validation-rule type="required"></dxi-validation-rule>
+      </dxi-column>
+
       <!-- Here the parameters to customize the grid -->
       <dxo-column-chooser [enabled]="true"></dxo-column-chooser>
       <dxo-filter-row [visible]="true"></dxo-filter-row>

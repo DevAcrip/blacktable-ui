@@ -1,26 +1,35 @@
-<h2 class="content-block">Módulo [MMOD]</h2>
+<h2 class="content-block">Tipo de movimiento por operación [MTMO]</h2>
 <div class="content-block">
   <div class="dx-card responsive-paddings">
     <dx-data-grid
-      [dataSource]="mmod"
-      keyExpr="codigo"
+      [dataSource]="mtmo"
+      keyExpr="tipo_movimiento"
       [columnAutoWidth]="true"
       [showColumnLines]="true"
       [showRowLines]="true"
       [showBorders]="true"
       [rowAlternationEnabled]="true"
     >
-      <dxi-column dataField="codigo">
+      <dxi-column dataField="tipo_movimiento">
         <dxi-validation-rule type="required"></dxi-validation-rule>
       </dxi-column>
-      <dxi-column dataField="descripcion">
+      <dxi-column dataField="operacion">
+        <dxi-validation-rule type="required"></dxi-validation-rule>
+      </dxi-column>
+      <dxi-column dataField="factor">
+        <dxi-validation-rule type="required"></dxi-validation-rule>
+      </dxi-column>
+      <dxi-column dataField="signo">
         <dxi-validation-rule type="required"></dxi-validation-rule>
       </dxi-column>
       <dxi-column dataField="estado">
         <dxi-validation-rule type="required"></dxi-validation-rule>
       </dxi-column>
+      <dxi-column dataField="valor_constante">
+        <dxi-validation-rule type="required"></dxi-validation-rule>
+      </dxi-column>
       <dxo-editing
-        mode="form"
+        mode="popup"
         [allowUpdating]="true"
         [allowDeleting]="true"
         [allowAdding]="true"

@@ -1,23 +1,27 @@
-<h2 class="content-block">Estados generales [MESG]</h2>
+<h2 class="content-block">Parámetros operativos de la empresa [MPEM]</h2>
 <div class="content-block">
   <div class="dx-card responsive-paddings">
     <dx-data-grid
-      [dataSource]="mesg"
-      keyExpr="codigo"
+      [dataSource]="mpem"
+      keyExpr="empresa"
       [allowColumnReordering]="true"
-      [allowColumnResizing]="true"
-      [columnAutoWidth]="true"
+      [allowColumnResizing]="false"
+      [columnAutoWidth]="false"
       >
       <!-- La siguiente linea va en las propiedades del dx data grid -->
       <!-- (onExporting)="onExporting($event)" -->
       <dxo-remote-operations [groupPaging]="true"> </dxo-remote-operations>
       <!-- (onSelectionChanged)="selectMmod($event)" -->
-      <dxi-column dataField="codigo" [fixed]="true">
+      <dxi-column dataField="empresa" [fixed]="true">
         <dxi-validation-rule type="required"></dxi-validation-rule>
       </dxi-column>
-      <dxi-column dataField="descripcion">
+      <dxi-column dataField="parametro_operativo">
         <dxi-validation-rule type="required"></dxi-validation-rule>
       </dxi-column>
+      <dxi-column dataField="contenido_variable">
+        <dxi-validation-rule type="required"></dxi-validation-rule>
+      </dxi-column>
+
       <!-- Here the parameters to customize the grid -->
       <dxo-column-chooser [enabled]="true"></dxo-column-chooser>
       <dxo-filter-row [visible]="true"></dxo-filter-row>

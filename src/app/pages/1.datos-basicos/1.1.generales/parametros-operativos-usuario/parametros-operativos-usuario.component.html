@@ -1,27 +1,30 @@
-<h2 class="content-block">Tipo de Movimiento [MTIM]</h2>
+<h2 class="content-block">Parámetros operativos del usuario [MPSU]</h2>
 <div class="content-block">
   <div class="dx-card responsive-paddings">
     <dx-data-grid
-      [dataSource]="mtim"
+      [dataSource]="mpsu"
       keyExpr="codigo"
       [allowColumnReordering]="true"
-      [allowColumnResizing]="true"
-      [columnAutoWidth]="true"
-      (onSelectionChanged)="selectMtim($event)"
-      (onExporting)="onExporting($event)"
-    >
-
+      [allowColumnResizing]="false"
+      [columnAutoWidth]="false"
+      >
+      <!-- La siguiente linea va en las propiedades del dx data grid -->
+      <!-- (onExporting)="onExporting($event)" -->
+      <dxo-remote-operations [groupPaging]="true"> </dxo-remote-operations>
+      <!-- (onSelectionChanged)="selectMmod($event)" -->
       <dxi-column dataField="codigo" [fixed]="true">
         <dxi-validation-rule type="required"></dxi-validation-rule>
       </dxi-column>
-      <dxi-column dataField="descripcion">
+      <dxi-column dataField="parametro_operativo">
         <dxi-validation-rule type="required"></dxi-validation-rule>
       </dxi-column>
-      <dxi-column caption="Llave única">
-        <dxi-column dataField="modulo"></dxi-column>
-        <dxi-column dataField="identificador" [visible]="true"></dxi-column>
-        <dxi-column dataField="estado"></dxi-column>
+      <dxi-column dataField="contenido_variable">
+        <dxi-validation-rule type="required"></dxi-validation-rule>
       </dxi-column>
+      <dxi-column dataField="empresa">
+        <dxi-validation-rule type="required"></dxi-validation-rule>
+      </dxi-column>
+
       <!-- Here the parameters to customize the grid -->
       <dxo-column-chooser [enabled]="true"></dxo-column-chooser>
       <dxo-filter-row [visible]="true"></dxo-filter-row>
@@ -55,17 +58,7 @@
         <dxi-item name="columnChooserButton"></dxi-item>
         <dxi-item name="searchPanel"></dxi-item>
       </dxo-toolbar>
-      <!-- <dxo-master-detail [enabled]="true" [template]="'mtim-info'">
-      </dxo-master-detail> -->
-      <!-- <div *dxTemplate="let mtim of 'mtim-info'">
-        <img class="mtim-photo" [src]="mtim.data.Photo" />
-        <p class="mtim-notes">{{ mtim.data.Notes }}</p>
-      </div>
-       -->
       <dxo-export [enabled]="true" [formats]="['xlsx']"></dxo-export>
     </dx-data-grid>
-    <p id="selected-mtim" *ngIf="selectedMtim">
-      Tipo de movimiento seleccionado: {{ selectedMtim.descripcion }}
-    </p>
   </div>
 </div>

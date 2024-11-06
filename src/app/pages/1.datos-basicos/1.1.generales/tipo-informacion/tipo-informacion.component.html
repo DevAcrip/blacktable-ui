@@ -2,7 +2,7 @@
 <div class="content-block">
   <div class="dx-card responsive-paddings">
     <dx-data-grid
-      [dataSource]="mmod"
+      [dataSource]="mtif"
       keyExpr="codigo"
       [columnAutoWidth]="true"
       [showColumnLines]="true"
@@ -17,6 +17,21 @@
         <dxi-validation-rule type="required"></dxi-validation-rule>
       </dxi-column>
       <dxi-column dataField="estado">
+        <dxi-validation-rule type="required"></dxi-validation-rule>
+      </dxi-column>
+      <dxi-column dataField="grupo">
+        <dxi-validation-rule type="required"></dxi-validation-rule>
+      </dxi-column>
+      <dxi-column dataField="requerido">
+        <dxi-validation-rule type="required"></dxi-validation-rule>
+      </dxi-column>
+      <dxi-column dataField="isTabla">
+        <dxi-validation-rule type="required"></dxi-validation-rule>
+      </dxi-column>
+      <dxi-column dataField="tipo_dato">
+        <dxi-validation-rule type="required"></dxi-validation-rule>
+      </dxi-column>
+      <dxi-column dataField="orden">
         <dxi-validation-rule type="required"></dxi-validation-rule>
       </dxi-column>
       <dxo-editing

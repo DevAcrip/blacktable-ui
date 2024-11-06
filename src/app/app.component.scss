@@ -1,3 +1,4 @@
+@use 'devextreme/scss/bundles/dx.softblue.scss';
 :host {
   @import "../themes/generated/variables.base.scss";
   background-color: darken($base-bg, 5.00);

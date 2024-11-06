@@ -6,7 +6,7 @@
   flex-direction: column;
   min-height: 100%;
   height: 100%;
-  width: 250px !important;
+  width: 400px !important;
 
   .menu-container {
     min-height: 100%;
@@ -29,7 +29,7 @@
         }
       }
       // ##
-      
+
       // ## Arrow customization
       .dx-treeview-node {
         padding: 0 0 !important;
@@ -41,7 +41,7 @@
       }
 
       .dx-rtl .dx-treeview-toggle-item-visibility {
-        left: 10px;
+        left: 1px;
         right: auto;
       }
       // ##
@@ -52,7 +52,7 @@
           font-weight: bold;
           border-bottom: 1px solid $base-border-color;
         }
-  
+
         &[aria-level='2'] .dx-treeview-item-content {
           font-weight: normal;
           padding: 0 $side-panel-min-width;
